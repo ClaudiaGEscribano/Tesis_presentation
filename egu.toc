@@ -1,0 +1,5 @@
+\beamer@endinputifotherversion {3.36pt}
+\beamer@sectionintoc {1}{Objectives and methodology}{5}{0}{1}
+\beamer@sectionintoc {2}{Results}{9}{0}{2}
+\beamer@subsectionintoc {2}{1}{$\Delta {PV}$ by country}{16}{0}{2}
+\beamer@sectionintoc {3}{Conclusions}{19}{0}{3}
