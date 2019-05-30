@@ -1,8 +1,8 @@
 \beamer@endinputifotherversion {3.36pt}
 \beamer@sectionintoc {1}{Context and introduction}{3}{0}{1}
 \beamer@subsectionintoc {1}{1}{Energy transition}{4}{0}{1}
-\beamer@subsectionintoc {1}{2}{VRE}{9}{0}{1}
-\beamer@sectionintoc {2}{Objectives and methodology}{20}{0}{2}
-\beamer@sectionintoc {3}{Results}{24}{0}{3}
-\beamer@subsectionintoc {3}{1}{$\Delta {PV}$ by country}{31}{0}{3}
-\beamer@sectionintoc {4}{Conclusions}{34}{0}{4}
+\beamer@subsectionintoc {1}{2}{VRE}{11}{0}{1}
+\beamer@sectionintoc {2}{Objectives and methodology}{22}{0}{2}
+\beamer@sectionintoc {3}{Results}{26}{0}{3}
+\beamer@subsectionintoc {3}{1}{$\Delta {PV}$ by country}{33}{0}{3}
+\beamer@sectionintoc {4}{Conclusions}{36}{0}{4}
