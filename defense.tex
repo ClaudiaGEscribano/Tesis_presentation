@@ -4,6 +4,7 @@
 \usepackage{appendixnumberbeamer}
 
 \usepackage{tikz}
+\usetikzlibrary{tikzmark,fit,shapes.geometric}
 
 \usepackage{booktabs}
 \usepackage[scale=2]{ccicons}
@@ -80,44 +81,55 @@
 
 \section{Context and introduction}
 
+
+% \begin{frame}[fragile]{The world is changing}
+% \Large{\centering{Energy Transition + Climate Change}}
+% \end{frame}
+
 \subsection{Energy transition}
 
-% \begin{frame}[fragile]{Energy transition}
-% \begin{figure}
-% \centering\includegraphics[scale=0.4]{contexto.pdf}
-% \end{figure}
-% \end{frame}
-
 \begin{frame}[fragile]{Energy transition}
 \begin{figure}
-\centering\includegraphics[scale=0.42]{diagram.pdf}
+\centering\includegraphics[scale=0.4]{diagram0.pdf}
 \end{figure} 
 \end{frame}
 
-% \begin{frame}[fragile]{Energy transition}
-% \begin{figure}
-% \centering\includegraphics[scale=0.42]{diagram2.pdf}
-% \end{figure} 
-% \end{frame}
-
-% \begin{frame}[fragile]{Energy transition}
-% \begin{figure}
-% \centering\includegraphics[scale=0.42]{diagram3.pdf}
-% \end{figure} 
-% \end{frame}
 
 \begin{frame}[fragile]{Energy transition}
 \begin{figure}
-\centering\includegraphics[scale=0.42]{diagram4.pdf}
+\centering\includegraphics[scale=0.4]{diagrama1.pdf}
 \end{figure} 
 \end{frame}
 
 \begin{frame}[fragile]{Energy transition}
 \begin{figure}
-\centering\includegraphics[scale=0.42]{diagram5pdf.pdf}
+\centering\includegraphics[scale=0.4]{diagrama2.pdf}
 \end{figure} 
 \end{frame}
 
+\begin{frame}[fragile]{Energy transition}
+\begin{figure}
+\centering\includegraphics[scale=0.4]{diagrama3.pdf}
+\end{figure} 
+\end{frame}
+
+\begin{frame}[fragile]{Energy transition}
+\begin{figure}
+\centering\includegraphics[scale=0.4]{diagrama4.pdf}
+\end{figure} 
+\end{frame}
+
+\begin{frame}[fragile]{Energy transition}
+\begin{figure}
+\centering\includegraphics[scale=0.4]{diagrama5.pdf}
+\end{figure} 
+\end{frame}
+
+\begin{frame}[fragile]{Energy transition}
+\begin{figure}
+\centering\includegraphics[scale=0.4]{diagram.pdf}
+\end{figure} 
+\end{frame}
 
 \begin{frame}[fragile]{Photovoltaic}
 \begin{itemize}
@@ -131,26 +143,28 @@
 \end{frame}
 
 \begin{frame}[fragile]{Links between climate/weather and the power sector}
+\centering{\textbf{Increase in RE -> increase in the \alert{electrification} of the energy sector. }}
   \begin{columns}
-    \begin{column}{0.5\textwidth}
+    \begin{column}{0.3\textwidth}
   \begin{figure}
     \centering\includegraphics[scale=0.55]{drawing1.pdf}
 \end{figure}
   \end{column}
-  \begin{column}{0.5\textwidth}
+  \begin{column}{0.7\textwidth}
     \begin{itemize}
-    \item Highly dependent on the state of the atmosphere.
+    \item Highly dependent on the state of the atmosphere:
       \begin{itemize}
-      \item Potential energy produced/ mean resource (\textbf{\alert{supply side}})
-        \end{itemize}
-      \item Modulate the electricity demand (\textbf{\alert{demand side}})
-      \item Operation atmospheric variables like temperature   
+      \item <2->\textbf{\alert{supply side}}: potential energy produced/ mean resource with RE
+      \item <3->\textbf{\alert{demand side}}: Modulate the electricity demand
+      \item <4->Operating variables: temperature   
+      \end{itemize}
       \end{itemize}
     \end{column}
     \end{columns}
 \end{frame}
 
-\begin{frame}[fragile]{Links between climate/weather and renewables}
+\begin{frame}[fragile]{Links between climate/weather and the power sector}
+\centering{\textbf{Increase in RE -> increase in the \alert{electrification} of the energy sector. }}
   \begin{columns}
     \begin{column}{0.7\textwidth}
   \begin{figure}
@@ -166,7 +180,8 @@
     \end{columns}
 \end{frame}
 
-\begin{frame}[fragile]{Links between climate/weather and renewables}
+\begin{frame}[fragile]{Links between climate/weather and the porwe sector}
+\centering{\textbf{Increase in RE -> increase in the \alert{electrification} of the energy sector. }}
   \begin{columns}
     \begin{column}{0.7\textwidth}
   \begin{figure}
@@ -174,10 +189,10 @@
 \end{figure}
   \end{column}
   \begin{column}{0.3\textwidth}
-    \begin{itemize}
-    \item Changes in the supply side
-     \item Changes in the demand side 
-      \end{itemize}
+\small{    \begin{itemize}
+    \item Changes in the \alert{supply} side
+     \item Changes in the \alert{demand} side 
+      \end{itemize}}
     \end{column}
     \end{columns}
 \end{frame}
@@ -233,36 +248,41 @@
 % \end{frame}
 % }
 
-\begin{frame}{RE in the electricity system}
-\centering\Large {Electricity systems features:}
+\begin{frame}{RE in the electricity system (supply side)}
+\centering\Large {Supply = Demand}
 \small{  \begin{itemize}  
-  \item <2->Demand and supply need to be \textbf{\alert{balanced}}.
-  \item <3->Electricity systems are designed for centralized \alert{conventional power plants}.
-  \item <4->\textbf{\alert{VRE}}: variable renewable energy.
+%  \item <2->Demand and supply need to be \textbf{\alert{balanced}}.
+  \item Electricity systems are designed for centralized \alert{conventional power plants}.
+    \begin{itemize}
+    \item \textbf{Dispachable} energy
+    \end{itemize}
+  \item \textbf{\alert{VRE}}: variable renewable energy.
+    \begin{itemize}
+    \item (most) \textbf{Non-dispachable}
+      \begin{itemize}
+         \item \textbf{\alert{Intermittency}}: not synchronized with the demand
+         \item Need of forecasting, plannification and/or storage
+         \item Variations \textbf{from short to long scales} (weather to climate)
+  \end{itemize}
+  \end{itemize}  
   \end{itemize}}
-\centering\includegraphics[width=0.5\textwidth]{system.png}
+%\centering\includegraphics[width=0.5\textwidth]{system.png}
 \end{frame}
 
 
-
-
 \begin{frame}{VRE: variable renewable energy}
-%\centering\Large {VRE: variable renewable energy}
+\vspace{0.1\baselineskip}\centering Variations \textbf{from short to long scales}\\ (weather to climate)\\
+\vspace{1\baselineskip}
 \begin{columns}
-  \begin{column}{0.55\textwidth}
-\small{\begin{itemize}
+  \begin{column}{0.4\textwidth}
 %  \item RE variable in space and time
- \item<2-> \textbf{\alert{Intermittency}}: not synchronized with the demand
-  \item<3-> Need of forecasting, plannification and/or storage
-  \item<4-> Variations \textbf{from short to long scales}\\ (weather to climate)
-    \begin{itemize}
+\small{    \begin{itemize}
     \item \alert{short}: operation
     \item \alert{medium}: planning, maintenance
     \item \alert{long}: resource assessment, financing, planning
-  \end{itemize}    
-\end{itemize}}
+  \end{itemize}}    
 \end{column}
-\begin{column}{0.6\textwidth}
+\begin{column}{0.65\textwidth}
   \centering\includegraphics[width=1\textwidth]{timescales.jpg}
 \end{column}
 \end{columns}
@@ -273,10 +293,10 @@
 % \end{columns}
 \end{frame}
 
-\begin{frame}{Long scales: links between climate and renewables}
-\centering\includegraphics[width=0.8\textwidth]{timescales2.jpg}
-\end{frame}
-
+% \begin{frame}{Long scales: links between climate and renewables}
+% \centering\includegraphics[width=0.8\textwidth]{timescales2.jpg}
+% \end{frame}
+ 
 
 % {
 % \usebackgroundtemplate{\tikz\node[opacity=0.5, inner sep=0pt,outer sep=0pt]{\includegraphics[width=\paperwidth, height=\paperheight]{powerline3.jpeg}};}
@@ -305,113 +325,681 @@
 
 
 \begin{frame}[plain]{Variability sources on PV}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
   \begin{enumerate}
   \item Astronomical factors  
   \item Atmospheric factors
+  \item PV system factors
+    \item Other factors
+    \end{enumerate}
+\end{column}
+\begin{column}{0.5\textwidth}    
+\end{column}
+\end{columns}
+\end{frame}
+
+
+\begin{frame}[plain]{Variability sources on PV}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+  \begin{enumerate}
+  \item Astronomical factors  
+  \item <2->Atmospheric factors
     \begin{itemize}
     \item clouds
     \item aerosols
     \end{itemize}    
-  \item PV system factors
-  \item  power plant size
+  \item <3->PV system factors
+    \begin{itemize}
+    \item  power plant size
     \item distance between plants
-    \item Other factors
+    \end{itemize}
+    \item <4->Other factors
       \begin{itemize}
       \item temperature
       \item soiling
       \end{itemize}
-    \end{enumerate}   
-%        \begin{figure}
-%         \centering\includegraphics[scale=0.3]{ImageMODIScreditNASA}
-%         \centering\caption{Image from July 16th, 2003. MODIS. Credit:NASA}
-% \end{figure}
+  \end{enumerate}
+\end{column}
+\begin{column}{0.65\textwidth}    
+       \begin{figure}
+       \begin{figure}
+\only<3>{\centering\includegraphics[scale=0.15]{pvplant}
+        \centering\caption{Relationship between sun position and the PV generator plane}}
+      \end{figure}
+       \begin{figure}
+\only<4>{\centering\includegraphics[scale=0.2]{pvmodule}
+        \centering\caption{Relationship between sun position and the PV generator plane}}
+      \end{figure}
+\only<2>{\centering\includegraphics[scale=0.28]{ImageMODIScreditNASA}
+        \centering\caption{Relationship between sun position and the PV generator plane}}
+      \end{figure}
+       \begin{figure}
+\only<1>{\centering\includegraphics[scale=0.28]{astronomical}
+        \centering\caption{Relationship between sun position and the PV generator plane}}
+      \end{figure}
+    \end{column}
+  \end{columns}
 \end{frame}
 
-\begin{frame}[fragile]{INTRODUCTION}
-\Large{\centering{Need for long-term projections of \textbf{\alert{resource and PV potential}}\\}}
+%|\only<2>{\includegraphics{fig}}|
+%|\uncover<2>{\includegraphics{fig}}|
+%|\visible<2>{\includegraphics{fig}}|
+
+\begin{frame}[fragile]{MOTIVATION}
+\Large{\centering{\textbf{Broaden knowledge on spatiotemporal behaviour of solar resource and \alert{PV production} over the Med\\}}}
 \vspace{1\baselineskip}
-\small{Previous studies show a \textbf{discrepancy} between \textbf{GCMs} and \textbf{RCMs} surface solar radiation (SSR) over Europe:\\}
-\begin{itemize}
-     \item \alert{Increase} projected by GCMs {\tiny(\textit{Wild et al. 2015, Solar Energy})}.
-     \item \alert{Decrease} projected by RCMs {\tiny(\textit{Jerez et al. 2015, Nature Communications})}.
-     \end{itemize}
-   % \textbf{Variabilidad estacional} muy marcada.
-%     \end{column}
-%     \begin{column}{0.4\textwidth}
-%       \begin{figure}
-%         \centering\includegraphics[scale=0.25]{mapa}
-% \caption{Nabat 2016}
-% \end{figure}
-% \end{column}
+\small{\begin{itemize}
+     \item \alert{Time scale:} Often neglected time scale: climate perspective.
+     \item \alert{Variability factors:} Often neglected impact of aerosols.
+     \item Availability (or potential changes) of solar resource under \alert{climate change} scenarios.  
+     \end{itemize}}
 \end{frame}
 
-\section{Objectives and methodology}
+\section{Objectives and methods}
 
-\begin{frame}[fragile]{OBJECTIVE}
-  \begin{itemize}
-  \item {\Huge{\alert{1}}} To illustrate the \textbf{inconsistency} between \textbf{GCM} and \textbf{RCM} projections and to attribute it to missing aerosols forcing. 
-    \vspace{1.5\baselineskip}
-    \item {\Huge{\alert{2}}} To \textbf{deliver future projections of PV} potential production over Europe.
-    \end{itemize}
- % \begin{alertblock}{RCM simulations from Euro-CORDEX}
-%   \begin{itemize}
-%   \item SSR from historical and RCP8.5.
-%   \item Simulations grouped by forcing GCM and aerosols representation.
-%   \end{itemize}
-% \end{alertblock}  
-% \begin{alertblock}{solaR}
-% Use of a parametric PV model. Implemented in R \tiny{(O. Perpiñán, 2013)}.
-% \end{alertblock}
-% \
+\begin{frame}[fragile]{GENERAL OBJECTIVES}
+\centering{\textbf{Approaches to different scientific questions}}
+\vspace{1\baselineskip}
+\small{\begin{itemize}
+  \item[]<2-> {\Huge{\alert{1}}} To systematize the spatiotemporal analysis of solar resource and photovoltaic productio \through a comprhensive method.
+    \begin{itemize}
+    \item<3-> To charactericed \textbf{interannual} variability of solar resource and photovoltaic productivity over the Iberian Peninsula.
+      \end{itemize}
+%    \vspace{1.5\baselineskip}
+    \item[]<4-> {\Huge{\alert{2}}} To quantify the impact of \textbf{aerosols} on the spatiotemporal variability of PV productivity over the Euro-Mediterranean area.
+      \begin{itemize}
+      \item <5->Investigate the RCMs added values in resource assessment studies.
+        \end{itemize}
+  \item[]<6-> {\Huge{\alert{3}}} To analyze \textbf{future projections} of photovoltaic potential and the role of aerosols.
+  \end{itemize}}
 \end{frame}
 
-\begin{frame}[fragile]{METHODS}
+\begin{frame}[fragile]{METHODS: modelization of PV productivity}
+\vspace{0\baselineskip}
+\textbf{\alert{PV productivity}}\\
+\vspace{1\baselineskip}
+{\centering{\Large\textbf{{Solar radiation + PV system}}}}
+\vspace{1\baselineskip}
+\begin{columns}
+  \begin{column}{0.4\textwidth}
+    \small{    \begin{blockalert}\begin{itemize}
+    \item From \textbf{measurements}
+% \begin{tikzpicture}[remember picture,overlay]
+% \node[draw,line width=1pt,cyan, circle,inner ysep=50pt,fit={(pic cs:start) (pic cs:end)}] {};
+% \end{tikzpicture} 
+    \item From \textbf{satellite}
+    \item From \textbf{RCMs}  
+      \end{itemize}\end{blockalert}}
+  \end{column}
+  \begin{column}{0.6\textwidth}
+% \begin{tikzpicture}[overlay, remember picture]
+% \node[draw,line width=1pt,cyan, circle,inner ysep=50pt,fit={(pic cs:start) (pic cs:end)}] {};
+% \end{tikzpicture}
+    \begin{figure}
+      \includegraphics[scale=0.45]{pvsistem.pdf}
+      \centering\caption{Squeme of a PV generator.}
+    \end{figure}
+  \end{column}
+\end{columns}
+\end{frame}
+
+\section{Results. Part I}
+
+\subsection{Multi-step scheme and spatial analysis of long-term characteristics of photovoltaic productivity over the Iberian Peninsula}
+
+\begin{frame}[standout]
+\centering{Multi-step scheme and spatial analysis of long-term characteristics of photovoltaic productivity over the Iberian Peninsula\footnote{\tiny{\textcolor{white}{This chapter has been published as a paper in Solar Energy journal; doi:}}}}
+\end{frame}
+
+\begin{frame}[fragile]{Introduction}
+\only<1->{Natural variability of renewable energy resources comes from short to longer scales. A \textbf{comprehensive} analysis should include \textbf{\alert{spatial}} and \textbf{\alert{temporal}} characteristics.\\}
+\vspace{1\baselineskip}
+\only<2-> {\textbf{Spatial} characteristics can be analysed by \alert{regionalization}\footnote{It attempts to capture the spatial variability of climate} approaches.\\}
+\vspace{1\baselineskip}
+\only<3->{\textbf{\alert{Clustering}} methods: \textbf{objective} methodology
   \begin{itemize}
-  \item {\Huge{\alert{1}}} To illustrate the \textbf{inconsistency} between \textbf{GCM} and \textbf{RCM} projections and to attribute it to missing aerosols forcing.
-    \vspace{1\baselineskip}
-    \begin{itemize} 
-    \item Use of well-chosen groups of GCM-RCM within the \alert{Euro-CORDEX} ensemble. 
-     \item \textbf{2021-2050} summer change in surface solar radiation, \alert{SSR}, with respect of a reference period: \textbf{1971-2000}. Use of \textbf{RCP8.5} scenario.
-    \end{itemize} 
+  \item Used for some climate variables.
+  \item Used for short-term analysis in solar resource.
+  \end{itemize}}  
+\end{frame}
+
+\begin{frame}[fragile]{Introduction}
+The \textbf{\alert{interannual}} variability affects renewable energy projects:   
+  \begin{itemize}
+  \item It impacts on the project yearly production, \textbf{yearly revenues}, and project \textbf{financing}.
   \end{itemize}
-  \vspace{1\baselineskip}
+However, it has been sometimes \textbf{\alert{discounted}} [Bryce 2018].
+  \begin{itemize}
+  \item Use of \textbf{TMY} datasets (not enough).
+  \end{itemize}
+Year-to-year \textbf{\alert{monthly series}} (of solar resource) are highly \textbf{variable} due to large-scale circulation modes.   
+\end{frame}
+
+
+\begin{frame}[fragile]{Objective}
+To \textbf{\alert{systematize}} the \textbf{\alert{spatiotemporal analysis}} of solar resource and photovoltaic production through a comprhensive method:
+  \begin{enumerate}
+  \item Obtain a \textbf{regionalization}
+  \item Analyse \textbf{variability} (PV, resource)
+  \item Analyse \textbf{complementarity}
+  \end{enumerate}
+\end{frame}
+
+
+% \begin{frame}[fragile]{Data}
+%   Use of satellite dataset from \textbf{CM-SAF}:
+%   \begin{itemize}
+%   \item SARAH dataset
+%   \item horizontal resolution: $0.05ºx 0.05º$
+%   \item time resolution: daily
+%   \end{itemize}   
+% \end{frame}
+ 
+\begin{frame}[fragile]{Method}
+\begin{figure}  
+\includegraphics[scale=0.45]{multi_step.pdf}
+\end{figure}
+\end{frame}
+
+\begin{frame}[fragile]{Method}
+\begin{figure}  
+\includegraphics[scale=0.45]{multi_step1.pdf}
+\end{figure}
+\end{frame}
+
+\begin{frame}[fragile]{Method: regionalization}
+  \begin{itemize}
+  \item[] <1-> Obtain a regionalization: \textbf{\alert{clustering}} algorithms
+  \begin{itemize}
+  \item \textbf{PCA}: principal component analysis
+    \begin{itemize}
+    \item {\tiny{To reduce dimensionality}}
+    \end{itemize}  
+  \item \textbf{hierarchical + k-means}
+    \begin{itemize}
+    \item {\tiny{To obtain an optimal partition} through an optimization or objective function.}
+    \end{itemize}  
+  \item validation: CH index + ``L-method''
+  \end{itemize}   
+% \item[] <2-> Analyse variability: \textbf{\alert{coefficient of variability}}
+%   \begin{equation} \small{CV=\frac{\sigma}{\bar{X}}}
+%   \end{equation}  
+%   \item[] <3-> Analyse complementarity: \textbf{\alert{correlation}} between clusters
+%     \begin{itemize}
+%     \item 15-year moving window.
+%       \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Method}
+\begin{figure}  
+\includegraphics[scale=0.45]{multi_step2.pdf}
+\end{figure}
+\end{frame}
+
+\begin{frame}[fragile]{Method}
+\begin{figure}  
+\includegraphics[scale=0.45]{multi_step4.pdf}
+\end{figure}
+\end{frame}
+
+\begin{frame}[fragile]{Method}
+   \begin{itemize}
+  % \item[] <1-> Obtain a regionalization: \textbf{\alert{clustering}} algorithms
+  % \begin{itemize}
+  % \item \textbf{PCA}: principal component analysis
+  %   \begin{itemize}
+  %   \item {\tiny{To reduce dimensionality}}
+  %   \end{itemize}  
+  % \item \textbf{hierarchical + k-means}
+  %   \begin{itemize}
+  %   \item {\tiny{To obtain an optimal partition} through an optimization or objective function.}
+  %   \end{itemize}  
+  % \item validation: CH index + ``L-method''
+  % \end{itemize}   
+\item[] Analyse variability: \textbf{\alert{coefficient of variability}}
+  \begin{equation} \small{CV=\frac{\sigma}{\bar{X}}}
+  \end{equation}  
+  % \item[] <3-> Analyse complementarity: \textbf{\alert{correlation}} between clusters
+     \begin{itemize}
+     \item Interannual variability of yearly values
+     \item Monthly series  
+     \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Method}
+\begin{figure}  
+\includegraphics[scale=0.45]{multi_step5.pdf}
+\end{figure}
+\end{frame}
+
+\begin{frame}[fragile]{Method}
+\begin{figure}  
+\includegraphics[scale=0.45]{multi_step6.pdf}
+\end{figure}
+\end{frame}
+
+\begin{frame}[fragile]{Method}
+   \begin{itemize}
+  % \item[] <1-> Obtain a regionalization: \textbf{\alert{clustering}} algorithms
+  % \begin{itemize}
+  % \item \textbf{PCA}: principal component analysis
+  %   \begin{itemize}
+  %   \item {\tiny{To reduce dimensionality}}
+  %   \end{itemize}  
+  % \item \textbf{hierarchical + k-means}
+  %   \begin{itemize}
+  %   \item {\tiny{To obtain an optimal partition} through an optimization or objective function.}
+  %   \end{itemize}  
+  % \item validation: CH index + ``L-method''
+  % \end{itemize}   
+% \item[] Analyse variability: \textbf{\alert{coefficient of variability}}
+%   \begin{equation} \small{CV=\frac{\sigma}{\bar{X}}}
+%   \end{equation}  
+    \item[] Analyse complementarity: \textbf{\alert{correlation}} between clusters
+     \begin{itemize}
+     \item 15-year moving window.
+     \end{itemize}
+\end{itemize}
+\end{frame}
+
+% \begin{frame}[fragile]{Method}
+%   \begin{itemize}
+%   \item[] <1-> Obtain a regionalization: \textbf{\alert{clustering}} algorithms
+%   \begin{itemize}
+%   \item \textbf{PCA}: principal component analysis
+%     \begin{itemize}
+%     \item {\tiny{To reduce dimensionality}}
+%     \end{itemize}  
+%   \item \textbf{hierarchical + k-means}
+%     \begin{itemize}
+%     \item {\tiny{To obtain an optimal partition} through an optimization or objective function.}
+%     \end{itemize}  
+%   \item validation: CH index + ``L-method''
+%   \end{itemize}   
+% \item[] <2-> Analyse variability: \textbf{\alert{coefficient of variability}}
+%   \begin{equation} \small{CV=\frac{\sigma}{\bar{X}}}
+%   \end{equation}  
+%   \item[] <3-> Analyse complementarity: \textbf{\alert{correlation}} between clusters
+%     \begin{itemize}
+%     \item 15-year moving window.
+%       \end{itemize}
+%   \end{itemize}
+% \end{frame}
+
+\begin{frame}[fragile]{Results: application to the IP}
+  The \textbf{\alert{IP}} is limited area with high variety of \textbf{climates}. It is also nearly \textbf{isolated} from the electrical point of view.
+%  \vspace{\baselineskip}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+  \textbf{DATA}:    
+  Use of satellite dataset from \textbf{\alert{CM-SAF}}:
+  \begin{itemize}
+  \item SARAH dataset
+  \item horizontal resolution: $0.05ºx 0.05º$
+  \item 30 years of daily data
+  \end{itemize}   
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{figure}
+\includegraphics[scale=0.3]{clusters2.pdf}
+      \end{figure}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% \begin{frame}[fragile]{Results: regionalization}
+%   \begin{columns}
+%     \begin{column}{0.5\textwidth}
+%   \textbf{Regionalization}:    
+%   \begin{enumerate}
+%   \item PCA
+%     \begin{itemize}
+%     \item {\tiny{To reduce dimensionality}}
+%     \end{itemize}  
+%   \item \textbf{hierarchical + k-means}
+%     \begin{itemize}
+%     \item {\tiny{To obtain an optimal partition}}
+%     \end{itemize}  
+%   \item validation: CH index
+%   \end{enumerate}   
+%     \end{column}
+%     \begin{column}{0.5\textwidth}
+%       \begin{figure}
+%         \includegraphics[scale=0.3]{clusters2.pdf}
+%       \end{figure}
+%     \end{column}
+%   \end{columns}
+% \end{frame}
+
+\begin{frame}[fragile]{Results: productivity by cluster}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \begin{figure}
+        \includegraphics[scale=0.35]{productivity_bycluster_andtype.pdf}
+      \end{figure}
+    \end{column}
+\begin{column}{0.5\textwidth}
+\vspace{1.5\baselineskip}  
+ \begin{itemize}
+ \item <1,2> \textbf{Lower productivity} for lower irradiation values: \textbf{northern clusters.}
+ \item <2> Yield increase from fixed to tracking is \alert{non-linear}.
+  \end{itemize}  
+   \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}[fragile]{Results: productivity by cluster}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \begin{figure}
+        \includegraphics[scale=0.35]{productivity_bycluster_andtype2.pdf}
+      \end{figure}
+\end{column}
+\begin{column}{0.5\textwidth}
+\vspace{1.5\baselineskip}  
+ \begin{itemize}
+ \item \textbf{Lower productivity} for lower irradiation values: \textbf{northern clusters}.
+  \item Yield increase from fixed to tracking is \alert{non-linear}. 
+  \item Yield \textbf{differences} among clusters is \textbf{higher} for \textbf{\alert{tracking systems}}.
+  \end{itemize}  
+   \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}[fragile]{Results: variability}
+  \begin{columns}
+    \begin{column}{0.6\textwidth}
+      \begin{figure}
+        \includegraphics[scale=0.4]{dotplot_ratio_zone2.pdf}
+      \end{figure}
+\end{column}
+    \begin{column}{0.5\textwidth}
+%       \begin{figure}
+% \hspace{1.5\baselineskip}{\includegraphics[scale=0.2]{clusters2.pdf}
+%       \end{figure}
+      \begin{itemize}
+      \item Ratio: \begin{math} {CV_{productivity}}\over{CV_{G0}}\end{math}
+     \item Linear relationship: Ratio and cluster.  
+      \item $Ratio > 1$ %: variability of PV productivity is higher
+        \begin{itemize}
+        \small{\item For tracking systems, whole year.
+        \item All systems in winter months.}
+        \end{itemize} 
+        \item $Ratio < 1$ %: variability of PV productivity is lower
+        \begin{itemize}
+        \small{\item For fixed systems in summer months.}
+        \end{itemize}  
+      \end{itemize}  
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% \begin{frame}[fragile]{Results: complementarity}
+% \begin{figure}
+%   \includegraphics[scale=0.42]{correlaciones_30.pdf}
+%   \end{figure}
+% \end{frame}
+
+\begin{frame}[fragile]{Results: complementarity}
+  \begin{columns}
+    \begin{column}{0.6\textwidth}
+      \begin{figure}
+        \includegraphics[scale=0.37]{figure9.pdf}
+\centering{\caption{Most (2-19) and less important (15-19) cluster pairs for complementarity}}
+      \end{figure}
+\end{column}
+    \begin{column}{0.5\textwidth}
+%       \begin{figure}
+% \hspace{1.5\baselineskip}{\includegraphics[scale=0.2]{clusters2.pdf}
+%       \end{figure}
+      \begin{itemize}
+      \item \textbf{2-18}: North-West/South-East negative correlated.
+      \item Values varies among the year.
+      \item Some pairs are highly correlated.
+      \end{itemize}  
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}[fragile]{Conclusions}
+    \begin{itemize}
+    \item<1->  The clustering algorithm is able to detect sub-regions with different characteristics.
+    \item <2->The tracking system is important when considering variability between clusters.
+    \item <3->The variability analysis shows a stable year-to-year resource, but with differences between areas.
+    \item <4->The complementarity results show:
+      \begin{itemize}
+      \item For the monthly series, most clusters are correlated but there is certain grade of complementarity between clusters in the Atlantic coast and the South East of the IP.
+      \end{itemize}
+    \item <5->The multi-step scheme is flexible for different variables and scales.  
+    \end{itemize}
+\end{frame}
+
+\section{Results. Part II}
+
+
+\begin{frame}[standout]
+\centering{Impact of aerosols on photovoltaic energy production over the Euro-Mediterranean area\footnote{\tiny{\textcolor{white}{This chapter has been published as a paper in Solar Energy journal; doi:}}}}
+\end{frame}
+
+\begin{frame}[fragile]{Introduction}
+\textbf{\alert{Aerosols}} are an important source of \textbf{variability} of solar radiation over the \textbf{Euro-Mediterranean} area. 
+\small{  \begin{itemize}
+\item<2->  They impact solar radiation \textbf{directly} and \textbf{indirectly}.
+\item<2->  In \textbf{low frequency} variability (decadal changes) the role of aerosols has been studied over Europe (\textbf{dimming/brightrenning}) 
+\item<2->  However: most of the RCMs do \textbf{not include aerosols} on their simulations.
+\end{itemize}}
+\end{frame}
+
+\begin{frame}[fragile]{Objective}
+To assess the \textbf{\alert{impact}} of \textbf{aerosols} on \textbf{photovoltaic} energy production over the Euro-Mediterranean area.
+\small{  \begin{itemize}
+  \item From seasonal to multi-decadal time scales.
+  \item Are regional climate models useful for the renewable energy resource assessment studies?
+  \end{itemize}}
+\end{frame}
+
+\begin{frame}[fragile]{Data and Methods}
+  \textbf{Climate data}\\
+\vspace{0.5\baselineskip}
+  \begin{columns}
+    \begin{column}{0.5\textwidth} 
+{RCM: \textbf{\alert{CNRM-RCSM4}}}
   \begin{table}
-    {\small{
-    \centering{\begin{tabular}[1\textwidth]{c|c|c}
+    {\tiny{
+    \centering{\begin{tabular}[1\textwidth]{c|c|c|c}
       \toprule
-      GCM & RCM & Aerosols \\
-      \midrule 
-                & CCLM4-8-17 & - \\
-       CNRM-CM5 & \alert{ALADIN53} & Szopa et al.\\
-                & RCA4 & -\\
-      \midrule           
-                & CCLM4-8-17 & - \\
-      EC-EARTH  & \alert{RACMO22E} & Lamarque et al.\\
-                & RCA4 & -\\
+      Simulation & Aerosols & Period \\
+                 \midrule
+                 AER & NAB13 & 2003-2009 \\
+                 NO-AER & Not included & 2003-2009\\
+                 TREND & NAB13 + sulfates trend & 1980-2012
+      \bottomrule
+               \end{tabular}}
+\vspace{0.5\baselineskip}{\caption{summary of simulations}}
+           \end{table}}}
+     \end{column}
+     \begin{column}{0.5\textwidth}
+       \begin{figure}
+       \vspace{0.2\baselineskip}\includegraphics[scale=0.4]{zonasPuntosLabel.pdf}
+       \end{figure}
+     \end{column}
+     \end{columns}
+       \textbf{Measurements}
+       \begin{columns}
+         \begin{column}{0.5\textwidth}
+       \begin{itemize}
+       \item Solar radiation: \textbf{\alert{BSRN}}
+       \end{itemize}
+  \begin{table}
+    {\tiny{
+    \centering{\begin{tabular}[1\textwidth]{c|c|c|c}
+      \toprule
+      Station & Time resolution & Period \\
+                 \midrule
+                 Payerne & monthly & 2003-2009 \\
+                 Sede-Boker & monthly & 2003-2009\\
+                 Carpentras & monthly & 2003-2009\\
       \bottomrule
                \end{tabular}}
              \vspace{0.75\baselineskip}
-             \caption{Groups of GCM-RCM used}
-     \end{table}}}
+             \caption{summary of stations}
+           \end{table}}}
+     \end{column}
+     \begin{column}{0.5\textwidth}
+       \begin{itemize}
+       \item \textbf{\alert{PV}} production \textbf{\alert{data}}:
+       \end{itemize}
+       \begin{table}
+    {\tiny{
+    \centering{\begin{tabular}[1\textwidth]{c|c|c|c}
+      \toprule
+      PV plant & Type & Period \\
+                 \midrule
+                 Seville & fixed & daily: 2-07-2007/30-11-2008 \\
+                 Tarragona & Two-axes & daily: 01-01-2003/19-03-2005\\
+      \bottomrule
+               \end{tabular}}
+             \vspace{0.75\baselineskip}
+             \caption{PV plants}
+           \end{table}}}
+     \end{column}
+     \end{columns}
 \end{frame}
 
+\begin{frame}[fragile]{Results: Local scale}
+  \textbf{SSR}\\
+  \begin{table}
+  {\tiny{
+    \centering{\begin{tabular}[1.5\textwidth]{c|c|c|c|c|c}
+      \toprule
+      Location & Simultation & RMSE & MBE & cor & sd \\
+                 \midrule
+               & AER & 16.59 & 12.05 & 0.98 & 90.05\\
+               Carpentras & NO-AER & 27.26 & 24.10 & 0.99 & 90.57\\
+               & SAT & 6.38 & 4.26 & 1.00  & 8.71\\
+                 \midrule
+               & AER & 21.21 & 16.62 & 0.97 & 77.40\\  
+               Payerne & NO-AER & 29.70 & 27.07 & 0.98 &81.88\\
+               & SAT & 7.36 & 4.60 & 0.99 & 83.29 \\
+               \midrule  
+               & AER & 18.89 & 8.17 & 0.98 & 62.83\\  
+               Sede Boker & NO-AER &37.42 &35.63 &0.98 &76.06\\
+               & SAT & 12.00 & 10.27 & 0.99 & 77.62 \\
+                 \bottomrule
+               \end{tabular}}
+             \vspace{0.75\baselineskip}
+             \caption{Evaluation of SSR from simulations}
+           \end{table}}}
+  % \begin{figure}
+  %   \includegraphics[scale=0.22]{CarpentrasMesesDif.pdf}
+  %   \includegraphics[scale=0.22]{PayerneMesesDif.pdf}
+  %   \includegraphics[scale=0.22]{SedebokerMesesDif.pdf}
+  %   \end{figure}
+\end{frame}
 
-\begin{frame}[fragile]{METHODS}
+\begin{frame}[fragile]{Results: Local scale}
+  \textbf{PV production}\\
+  \vspace{0.5\baselineskip}
+  \begin{columns}
+    \begin{column}{0.8\textwidth}
+  \hspace{3.2\baselineskip}{Seville}
+  \hspace{3.8\baselineskip}{Tarragona}
+  \begin{figure}
+    \includegraphics[scale=0.2]{violinplorSeville.pdf}
+    \includegraphics[scale=0.2]{violinplotTarragona.pdf}
+  \end{figure}
+\end{column}
+\begin{column}{0.2\textwidth}
+  \tiny{{\textcolor{blue}{NO-AER}}}\\
+  \tiny{{\textcolor{red}{AER}}}\\
+  \tiny{{\textcolor{green!90}{SAT}}}\\
+\end{column}
+\end{columns}
+{\small{\begin{itemize}
+\item For Seville PV plant, AER performs better than NO-AER and SAT.
+\item Higher errors are found in Tarragona plant for all the simulations. 
+\item NO-AER is the one with higher errors in both cases.
+\end{itemize}}}  
+\end{frame}
+
+\begin{frame}[fragile]{Results: Regional scale}
+\textbf{SSR}: Simulation-Satellite  
+  \begin{figure}
+  \includegraphics[scale=0.5]{dif_model_sat_zonas}%diferencia_mesesFIXED2.png}  
+\end{figure}
+\begin{itemize}
+\item The NO-AER overestimates in comparison with SAT.
+\item Small interannual variability.
+\item AER underestimates in AFRW  
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Results: Impact of aerosols by tracking type}
+\textbf{Mean behavior: 2003-2009}
+  \begin{figure}
+  \includegraphics[scale=0.3]{byCountry}  
+\caption{Relative difference [\textbf{\%}]of PV productivity averaged by country and by type}
+\end{figure}
+\begin{itemize}
+\item a
+\item b
+\item c  
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Results: Impact of aerosols by tracking type}
+  \begin{columns}
+  \begin{column}{0.7\textwidth}
+    \begin{figure}
+\small{\textbf{Seasonal cycle: 2003-2009}}
+  \includegraphics[scale=0.5]{seasonalimpact.pdf}  
+\end{figure}
+\end{column}
+\begin{column}{0.43\textwidth}
+\begin{itemize}
+\item a
+\item b
+\item c  
+\end{itemize}
+\end{column}
+ \end{columns}
+\end{frame}
+
+\begin{frame}[fragile]{Results: Impact of aerosols by tracking type}
+\small{\textbf{Long-term trends: 1980-2012}}
+\begin{figure}
+\includegraphics[scale=0.38]{longterm.pdf}  
+\end{figure}
+\begin{itemize}
+\item a
+\item b
+\item c
+\end{itemize}  
+\end{frame}
+
+\begin{frame}[fragile]{Conclusions}
+\textbf{\alert{Discussion}}
+{\small{  \begin{itemize}
+\item Limitations due to the RCM: single model, horizontal resolution, time resolution of aerosols, cloud representation. 
+\item PV production data: a need for real PV production data would help on the modeling chain assessment.
+\end{itemize}}}
+\textbf{\alert{conclusions}}
+{\small{\begin{itemize}
+\item The RCM simulations are able to reproduce real data of two PV plants.
+\item The RCM with aerosols improves with respect to the no-aerosols.
+\item The impact of aerosols has been quantify with a sensitivity test:
   \begin{itemize}
-  \item {\Huge{\alert{2}}} To \textbf{deliver future projections of PV} potential production over Europe.
+  \item most impacted areas in central Europe.
+  \item In the multi-decadal...
   \end{itemize}
-\begin{alertblock}{solaR}
-\end{alertblock}
-Parametric PV model. \textbf{SSR} from \textbf{RCM} as input -> POA and electrical performance. Implemented in R \tiny{(O. Perpiñán, 2013).
-  \vspace{2\baselineskip}
-      \begin{figure}
-      \centering\includegraphics[scale=0.5]{pvsistem.pdf}
-      \vspace{1\baselineskip}
-      \centering\caption{Squeme of a PV generator.}
-      \end{figure}
+\end{itemize}}}  
 \end{frame}
 
-\section{Results}
+\section{Results. Part III}
  
 \begin{frame}[fragile]{SSR mean changes 2021-2050}
 \vspace{1\baselineskip}

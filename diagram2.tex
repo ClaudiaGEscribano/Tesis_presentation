@@ -1,0 +1,51 @@
+% Author: Till Tantau
+% Source: The PGF/TikZ manual
+\documentclass{article}
+
+\usepackage{tikz}
+\usetikzlibrary{mindmap,trees}
+\usepackage{verbatim}
+
+\begin{document}
+\pagestyle{empty}
+
+\begin{comment}
+:Title: Computer science mindmap
+:Tags: Manual, Mindmap
+
+Version 1.09 of PGF/TikZ added a library for drawing mindmaps. Here's an example
+from the manual. 
+
+| Author: Till Tantau
+| Source: The PGF/TikZ manual
+
+\end{comment}
+
+\begin{tikzpicture}
+  \path[mindmap,concept color=black!70,text=white]
+    node[concept] {Increase in RREE}
+    [clockwise from=-60]
+    % child[concept color=green!50!black] {
+    %   node[concept] {practical}
+    %   [clockwise from=90]
+    %   child { node[concept] {algorithms} }
+    %   child { node[concept] {data structures} }
+    %   child { node[concept] {pro\-gramming languages} }
+    %   child { node[concept] {software engineer\-ing} }
+    % }  
+    child [concept color=blue] {
+      node[concept] {COST}
+      [clockwise from=60]
+      child { node[concept] {databases} }
+      child { node[concept] {WWW} }
+      child { node[concept] {WWW} }
+    }
+    child [concept color=green!50!black] {
+      node[concept] {technical} 
+      [clockwise from=-30]
+      child { node[concept] {databases} }
+      child { node[concept] {WWW} }
+      child { node[concept] {WWW} }
+    }
+    child[concept color=orange] { node[concept] {KNOWLEDGE} };
+\end{tikzpicture}\end{document}

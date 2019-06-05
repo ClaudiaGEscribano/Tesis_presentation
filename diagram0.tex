@@ -1,0 +1,91 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Author  : Andrei Sobolevski (April 2009)
+% License : Creative Commons attribution license
+% Title   : Map of scientific interactions of researchers 
+%           affiliated in 2008 to the J.-V. Poncelet laboratory 
+%           (UMI 2615 CNRS, http://www.poncelet.ru)
+% Notes   : Produced for the 2008 annual report of the lab;
+%           layout of subnodes is a result of manual optimization
+% Tags    : mindmap, layers
+% Submitted to TeXample.net on 16 January 2010
+
+\documentclass{article}
+%%%<
+\usepackage{verbatim}
+%%%>
+\begin{comment}
+:Title: Scientific interactions
+
+Map of scientific interactions of researchers 
+affiliated in 2008 to the J.-V. Poncelet laboratory 
+(UMI 2615 CNRS, `<http://www.poncelet.ru>`_) 
+ 
+\end{comment}
+\usepackage{tikz,times}
+\usepackage[paperwidth=30cm,paperheight=19cm,left=1cm,top=1cm]{geometry}
+
+\usetikzlibrary{mindmap,backgrounds}
+
+\pagestyle{empty}
+
+\begin{document}
+\centering\begin{tikzpicture}[mindmap,
+  every node/.style={concept,circular drop shadow},
+  level 1 concept/.append style={level distance=140, font=\large\bfseries, sibling angle=30, text width=9em},
+  extra concept/.append style={color=blue!50,text=black, font=\Large\bfseries, text width=20em}]
+
+  % Societal and Environmental drivers
+
+  \begin{scope}[mindmap, concept color=green!50!black, text=white]
+    \node [concept, opacity=0.1] at (0, 0) (se) {\textbf{Societal \& Environmental}}
+      child [grow=-230, opacity=0.1]{node [concept] (alg) {Pollution}}
+      child [grow=-180, opacity=0.1] {node [concept] (cod) {Environmental concern}}
+      child [grow=90, opacity=0.1] {node [concept] (img) {Public opinion}}
+      child [concept color=red!50, grow=-60, opacity=0.1] {node [concept] (policies) {POLICIES}};
+
+    \end{scope}
+
+  % Economic and market drivers  
+
+  \begin{scope}[mindmap, concept color=blue,text=white]
+    \node [concept, opacity=0.1] at (14,0) {\textbf{Economic \& Market}} %[clockwise from=-240]
+      child [grow=90, level distance=160, opacity=0.1] {node [concept] (qin) {Fossil fuels dependency}}
+      child [grow=45, opacity=0.1] {node [concept] (csm) {Future scarcity}}
+      child [grow=0,opacity=0.1] {node [concept] (mat) {Strategy}}
+      child [concept color=blue!50, grow=240, opacity=0.1] {node [concept] (cost) 
+        {COST}};
+
+  \end{scope}
+
+  % research and development
+
+  \begin{scope}[mindmap, concept color=red!70,text=white]
+    \node [concept, opacity=0.1] (RD) at (7,5) {\textbf{RESEARCH \& DEVELOPMENT}} ;
+  \end{scope}
+  
+  % Increase in RE
+   
+  \begin{scope}[mindmap, concept color=black!70!blue!90!green!70,text=white]
+    \node [concept, font=\Large] (re) at (7,0) {\textbf{INCREASE IN RENEWABLE ENERGIES}} ;
+  \end{scope}
+  
+  % Climate change
+  
+   \begin{scope}[mindmap, concept color=orange,text=white]
+    \node [concept, font=\Large, opacity=0.1] (cc) at (-5,-6) {\textbf{Climate Change}} ;
+  \end{scope}
+
+
+
+   \begin{pgfonlayer}{background}
+     \draw [concept connection, opacity=0.1]%[circle connection bar] 
+       (re) edge (cost)
+       (policies) edge (cost)
+       (re) edge (policies)
+       (cc) edge (cod) edge (policies)
+       (RD) edge (re) ;
+   \end{pgfonlayer}
+
+\end{tikzpicture}
+
+\end{document}

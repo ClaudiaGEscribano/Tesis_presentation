@@ -1,8 +1,11 @@
 \beamer@endinputifotherversion {3.36pt}
 \beamer@sectionintoc {1}{Context and introduction}{3}{0}{1}
 \beamer@subsectionintoc {1}{1}{Energy transition}{4}{0}{1}
-\beamer@subsectionintoc {1}{2}{VRE}{11}{0}{1}
-\beamer@sectionintoc {2}{Objectives and methodology}{22}{0}{2}
-\beamer@sectionintoc {3}{Results}{26}{0}{3}
-\beamer@subsectionintoc {3}{1}{$\Delta {PV}$ by country}{33}{0}{3}
-\beamer@sectionintoc {4}{Conclusions}{36}{0}{4}
+\beamer@subsectionintoc {1}{2}{VRE}{18}{0}{1}
+\beamer@sectionintoc {2}{Objectives and methods}{26}{0}{2}
+\beamer@sectionintoc {3}{Results. Part I}{34}{0}{3}
+\beamer@subsectionintoc {3}{1}{Multi-step scheme and spatial analysis of long-term characteristics of photovoltaic productivity over the Iberian Peninsula}{35}{0}{3}
+\beamer@sectionintoc {4}{Results. Part II}{61}{0}{4}
+\beamer@sectionintoc {5}{Results. Part III}{74}{0}{5}
+\beamer@subsectionintoc {5}{1}{$\Delta {PV}$ by country}{81}{0}{5}
+\beamer@sectionintoc {6}{Conclusions}{84}{0}{6}
